@@ -53,6 +53,7 @@ while True:
 
 ######################################################
 ######################################################
+    
     #文字部分by AI code
     # 準備文字
     left_text  = f"FPS = {fps_ema:5.1f}"
@@ -81,4 +82,7 @@ while True:
 cap.release()
 out.release()
 cv2.destroyAllWindows()
+
+
+
 
