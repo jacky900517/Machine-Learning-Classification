@@ -1,9 +1,13 @@
-import cv2
+import cv2 
 from datetime import datetime
 import time
+import numpy as np
+
+lower = np.array([70,140,0])   # 轉換成 NumPy 陣列
+upper = np.array([130,240,130])  # 轉換成 NumPy 陣列
 
 # 擷取我的視訊鏡頭
-cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
+cap = cv2.VideoCapture(0)
 if not cap.isOpened():
     print("Cannot open camera"); raise SystemExit
 
@@ -21,7 +25,7 @@ fps_wr = cap.get(cv2.CAP_PROP_FPS)
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 
 #設定影片輸出格式跟名稱
-out = cv2.VideoWriter('myFPS&TIME.mp4', fourcc, fps_wr, (width, height))
+out = cv2.VideoWriter('HW2_1.mp4', fourcc, fps_wr, (width, height))
 
 if not out.isOpened():
     print("VideoWriter not opened"); raise SystemExit
@@ -44,6 +48,10 @@ while True:
     if not ret:
         print("Cannot receive frame"); break
 
+    #製作遮罩
+    mask = cv2.inRange(frame, lower, upper) 
+    output = cv2.bitwise_and(frame, frame, mask = mask )
+
     # 更新 FPS
     now = time.time()   #現在時間
     dt = now - prev_t   #兩幀的時間差
@@ -62,27 +70,26 @@ while True:
     # 左上：先描邊再實字
     (lw, lh), _ = cv2.getTextSize(left_text, font, scale, thick)
     lx, ly = margin, margin + lh
-    cv2.putText(frame, left_text, (lx+1, ly+1), font, scale, bg, thick+2, cv2.LINE_AA)
-    cv2.putText(frame, left_text, (lx,   ly),   font, scale, fg, thick,   cv2.LINE_AA)
+    cv2.putText(output, left_text, (lx+1, ly+1), font, scale, bg, thick+2, cv2.LINE_AA)
+    cv2.putText(output, left_text, (lx,   ly),   font, scale, fg, thick,   cv2.LINE_AA)
 
     # 右上：靠右對齊
     (rw, rh), _ = cv2.getTextSize(right_text, font, scale, thick)
     rx, ry = frame.shape[1] - rw - margin, margin + rh
-    cv2.putText(frame, right_text, (rx+1, ry+1), font, scale, bg, thick+2, cv2.LINE_AA)
-    cv2.putText(frame, right_text, (rx,   ry),   font, scale, fg, thick,   cv2.LINE_AA)
+    cv2.putText(output, right_text, (rx+1, ry+1), font, scale, bg, thick+2, cv2.LINE_AA)
+    cv2.putText(output, right_text, (rx,   ry),   font, scale, fg, thick,   cv2.LINE_AA)
     
 ######################################################
 ######################################################
     
-    out.write(frame) #把文字寫進影片
-    cv2.imshow('oxxostudio', frame) #顯示視窗
+    out.write(output) #把文字寫進影片
+    cv2.imshow('oxxostudio', output) #顯示視窗
     if cv2.waitKey(1) == ord('q'): #設定按q離開
         break
 
 cap.release()
 out.release()
 cv2.destroyAllWindows()
-
 
 
 
