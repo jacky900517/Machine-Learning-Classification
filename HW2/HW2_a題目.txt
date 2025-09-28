@@ -1,0 +1,5 @@
+依照以下方法，手持特殊顏色的物件（罐子、或球）
+拍一影片實作一物件過濾，錄影繳交
+過濾時你應該先觀察特殊顏色的物件的RGB三原色範圍
+選擇適當的 lower_bound, upper_bound
+https://steam.oxxostudio.tw/category/python/ai/opencv-inrange.html
