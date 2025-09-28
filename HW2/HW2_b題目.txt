@@ -1,0 +1,2 @@
+練習，你可以試試看依照以下方法，實作一物件追蹤，錄影繳交
+https://steam.oxxostudio.tw/category/python/ai/ai-multi-tracker.html
