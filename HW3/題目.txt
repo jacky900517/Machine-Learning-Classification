@@ -1,0 +1,1 @@
+Raspberry Pi 5 作業系統安裝，並跑一段 python 程式
