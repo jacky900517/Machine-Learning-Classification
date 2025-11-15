@@ -21,10 +21,11 @@ conda create -n YOLO python = 3.11
 ```md
 conda activate YOLO
 ``` 
-<br>
+
 ```md
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu128
 ```
 
+安裝完成後請確認Pytorch Cuda可以正常使用再繼續操作<br>
 
 
