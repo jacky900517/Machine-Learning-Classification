@@ -30,7 +30,7 @@ pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu12
 在`Anaconda Prompt`中輸入以下指令完成YOLO的安裝。
 
 ```md
-pushd #你的地址
+pushd #你ultralytics資料夾的路徑
 ```
 
 ```md
@@ -44,4 +44,6 @@ yolo detect predict
 執行完成後應該會在`\ultralytics\runs\detect\predict`中找到預測完成的兩張圖片，代表`YOLO`環境能正常使用了。
 
 將此repo中的`best.pt`放入`ultralytics`資料夾中後就可以使用已經訓練好的道路偵測模型
+
+另外這個`best.pt`是使用`yolo11n-seg.pt`Instance Segmentation模型進行訓練的，[訓練集](https://drive.google.com/drive/folders/1Z3SJl0XckYZFcVL5a15KsdCJGiCZNAdB?usp=sharing)<br>
 
