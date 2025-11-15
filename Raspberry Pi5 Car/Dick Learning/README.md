@@ -2,8 +2,7 @@
 
 在本地部屬YOLOv11流程
 
-去到:
-https://github.com/ultralytics/ultralytics#
+去到 [ultralytics](https://github.com/ultralytics/ultralytics#) 的GitHub
 
 <>Code -> Download zip 後解壓縮到你要存放的路徑
 
