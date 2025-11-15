@@ -1,0 +1,7 @@
+path: D:\dicklearning\ultralytics-8.3.163\datasets\CarLane
+train: images/train
+val: images/val
+test:
+
+names:
+    0: Lane
