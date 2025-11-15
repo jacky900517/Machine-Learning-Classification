@@ -14,7 +14,7 @@ conda create -n YOLO python = 3.11
 ```
 創建完成後我們要下載Pytorch，Pytorch根據你的Nvidia GPU型號來下載對應支持的Pytorch版本<br>
 若使用的是CPU的話就下載CPU版本的Pytorch，這邊不對Pytorch Cuda版本的查詢進行教學<br>
-可以到Nvidia驅動面板中察看或自行上網搜尋，不同版本Pytorch安裝指令請到: `https://pytorch.org/get-started/locally/` 進行查詢<br>
+可以到Nvidia驅動面板中察看或自行上網搜尋，不同版本Pytorch安裝指令請到: `[Pytorch官網](https://pytorch.org/get-started/locally/)` 進行查詢<br>
 
 這邊以GPU型號 : `RTX 5080` 作為範例(50系列顯卡可以照抄)
 安裝`Pytorch CUDA 12.8`版本<br>
@@ -42,7 +42,7 @@ pip install -e .
 ```md
 yolo detect predict
 ```
-執行完成後應該會在`\ultralytics\runs\detect\predict`中找到預測完成的兩張圖片<br>
-代表`YOLO`環境能正常使用了。
+執行完成後應該會在`\ultralytics\runs\detect\predict`中找到預測完成的兩張圖片，代表`YOLO`環境能正常使用了。
 
+將此repo中的`best.pt`放入`ultralytics`資料夾中後就可以使用已經訓練好的道路偵測模型
 
