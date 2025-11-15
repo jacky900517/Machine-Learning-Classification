@@ -1,4 +1,4 @@
-path: D:\dicklearning\ultralytics-8.3.163\datasets\CarLane
+path: ##add you dataset path here
 train: images/train
 val: images/val
 test:
