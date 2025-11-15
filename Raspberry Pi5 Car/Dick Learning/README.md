@@ -43,5 +43,5 @@ yolo detect predict
 ```
 執行完成後應該會在`\ultralytics\runs\detect\predict`中找到預測完成的兩張圖片，代表`YOLO`環境能正常使用了。
 
-將此repo中的[best.pt](/YOLOv11seg-Training/best.pt)放入`ultralytics`資料夾中後就可以使用已經訓練好的道路偵測模型
+將此repo中的[best.pt](/Raspberry Pi5 Car/Dick Learning/YOLOv11seg-Training/best.pt)放入`ultralytics`資料夾中後就可以使用已經訓練好的道路偵測模型
 
