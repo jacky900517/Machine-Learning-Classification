@@ -27,5 +27,17 @@ pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu12
 ```
 
 安裝完成後請確認Pytorch Cuda可以正常使用再繼續操作<br>
+找到你存放ultralytics的資料夾，複製該資料夾地址<br>
+在Anaconda Prompt中輸入
+
+```md
+pushd #你的地址
+```
+
+```md
+pip install -e .
+```
+去完成YOLO的安裝。
+
 
 
