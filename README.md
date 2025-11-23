@@ -1,7 +1,7 @@
 # Machine-Learning-Classification
 Machine Learning &amp; Classification 機器學習與辨識技術 (自走車)
 
-由卓世明教授開設的 「機器學習與辨識技術」實際上就是自走車課程
+此「機器學習與辨識技術」實際上就是自走車課程
 此Repository僅用來繳交作業code &amp; 提供給其他修課同學參考
 Repository中使用到的Python代碼部分由AI生成，使用時自行斟酌
 
